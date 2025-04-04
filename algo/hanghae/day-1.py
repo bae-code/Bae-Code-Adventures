@@ -24,21 +24,21 @@ a = "3 16"
 def solve():
     a, b = map(int, input().split())
     is_prime = [True] * (b + 1)
-    
+
     is_prime[0] = False
     is_prime[1] = False
 
     for i in range(2, int(b**0.5) + 1):
         if is_prime[i]:
-            for j in range(i*i,b + 1,i):
+            for j in range(i * i, b + 1, i):
                 is_prime[j] = False
-    
-    for x in range(a,b+1):
+
+    for x in range(a, b + 1):
         if is_prime[x]:
             print(x)
 
-solve()
 
+solve()
 
 
 """

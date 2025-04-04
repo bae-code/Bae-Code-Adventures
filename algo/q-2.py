@@ -32,12 +32,13 @@ Output: 5
 """
 
 input = "programmerxabcxprogrammer"
+
+
 def solve(ip):
-    match = "programmer" 
+    match = "programmer"
     start_pointer = 0
-    end_pointer = len(match) -1
-    
-    
+    end_pointer = len(match) - 1
+
     result = 0
     for i in range(len(ip)):
         if ip[i] == match[start_pointer]:
@@ -46,7 +47,7 @@ def solve(ip):
                 left_end = i
                 break
 
-    for j in range(len(ip) -1, start_pointer ,-1):
+    for j in range(len(ip) - 1, start_pointer, -1):
         if ip[j] == match[end_pointer]:
             end_pointer -= 1
             if end_pointer < 0:
@@ -65,6 +66,3 @@ def solve(ip):
 
 a = solve(ip=input)
 print(a)
-
-
-

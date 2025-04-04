@@ -10,7 +10,9 @@ output:
 ['YES', 'NO','NO', 'YES']
 """
 import textwrap
-input = ['{}[]()', '{[}]}', '{{', '{[]}']
+
+input = ["{}[]()", "{[}]}", "{{", "{[]}"]
+
 
 def braces(ip):
     results = []
@@ -19,12 +21,12 @@ def braces(ip):
         "{": "}",
         "[": "]",
     }
-    start_barce = '{[('
+    start_barce = "{[("
     for s in ip:
         result = "YES"
         if len(s) % 2 != 0:
             result = "NO"
-        
+
         brace_stack = []
         for i in s:
             if i in start_barce:
@@ -33,7 +35,7 @@ def braces(ip):
                 if not brace_stack:
                     result = "NO"
                     break
-                #닫는 케이스
+                # 닫는 케이스
                 if i == correct_match_map[brace_stack[-1]]:
                     brace_stack.pop()
                 else:
@@ -43,14 +45,11 @@ def braces(ip):
             result = "NO"
 
         results.append(result)
-        
+
     return results
 
 
 test = braces(input)
 print(test)
-output = ['YES', 'NO','NO', 'YES']
-print(test == output )
-
-
-
+output = ["YES", "NO", "NO", "YES"]
+print(test == output)

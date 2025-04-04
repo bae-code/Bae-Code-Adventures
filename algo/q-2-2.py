@@ -49,20 +49,19 @@
 input = """5
 1 2 3 8 9"""
 
+
 def solve(ip):
-    
-    data = ip.split('\n')
+    data = ip.split("\n")
     max_len = int(data[0])
-    int_list = list(map(lambda x: int(x),data[1].split(" ")))
+    int_list = list(map(lambda x: int(x), data[1].split(" ")))
     int_list.sort()
-    target = 1 # 인풋에서온 조합으로 1을 만들 수 있는지 체크한다.
-    for i in int_list: # 현재 숫자 i가 target보다 크다면 gap 발생
+    target = 1  # 인풋에서온 조합으로 1을 만들 수 있는지 체크한다.
+    for i in int_list:  # 현재 숫자 i가 target보다 크다면 gap 발생
         if i > target:
-            print(i,target)
+            print(i, target)
             break
         target += i
 
-    
     print(target)
     return target
 
@@ -87,11 +86,11 @@ solve(ip=input)
 input = """8 15
 1 2 3 4 5 6 7 8"""
 
+
 def solve(ip):
-    
-    data = ip.split('\n')
+    data = ip.split("\n")
     max_len = int(data[0])
-    int_list = list(map(lambda x: int(x),data[1].split(" ")))
+    int_list = list(map(lambda x: int(x), data[1].split(" ")))
     int_list.sort()
 
     target = 1
@@ -101,5 +100,6 @@ def solve(ip):
         target += i
 
     print(target)
+
 
 solve(ip=input)

@@ -24,6 +24,7 @@ input = "()"
 input = "(()((()))())"
 # input = ''
 
+
 def solve(ip):
     if not ip:
         return 0
@@ -35,34 +36,35 @@ def solve(ip):
     val = 1
     is_end = True
     for i in ip:
-        if i == '(':
+        if i == "(":
             is_end = False
             val += 1
-        elif i != '(' and not is_end:
+        elif i != "(" and not is_end:
             is_end = True
             depth.append(val)
             val = 1
-    
+
     return max(depth)
 
 
 # 수학적 접근으로 새 풀이
 
+
 def solve_2(ip):
     # 스택도 없으니 메모리 사용 최소화
     # CPU L1 캐시 최적화에 더 유리
     depth = 0
-    max_depth = 0 
+    max_depth = 0
     for i in ip:
-        if i == '(':
+        if i == "(":
             depth += 1
             max_depth = max(depth, max_depth)
-        elif i == ')':
+        elif i == ")":
             depth -= 1
 
     return max_depth
 
-    
+
 """
 초기 설계는 문제 조건을 바탕으로 슬라이싱 후 depth를 측정했습니다.
 이 경우에는 공간 복잡도가 O(N) 으로 처리 되기때문에 문자열의 크기가 커질수록 메모리와 GC에 부하가 일어나기때문에 비효율적입니다.
@@ -75,6 +77,5 @@ O(N)으로 가장 깔끔하고 공간복잡도 역시 O(1)로 돌아가기때문
 solve(ip=input)
 output = 4
 solve_2(ip=input)
-print(solve_2(ip=input)==output)
-print(solve(ip=input)==output)
-    
+print(solve_2(ip=input) == output)
+print(solve(ip=input) == output)

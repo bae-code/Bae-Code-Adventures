@@ -17,11 +17,13 @@ s = "())("
 input = "())(()"
 input = "((())((())"
 input = ")()))"
+
+
 def solve(ip):
     result = 0
     final = 0
     for i in ip:
-        if i == '(':
+        if i == "(":
             if result <= 0:
                 result = 0
             result += 1
@@ -34,7 +36,6 @@ def solve(ip):
     return final
 
 
-
 a = solve(ip=input)
 output = 3
-print(a==output)
+print(a == output)

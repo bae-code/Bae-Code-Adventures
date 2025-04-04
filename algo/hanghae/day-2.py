@@ -33,7 +33,7 @@ def fivo(n):
     dp = [0] * (n + 1)
 
     dp[1] = dp[2] = dp[3] = 1  # 초기값 정의
-    
+
     for i in range(4, n + 1):
         dp[i] = dp[i - 1] + dp[i - 3]  # 점화식 적용
     return dp[n]
@@ -42,17 +42,16 @@ def fivo(n):
 fivo(a)
 
 
-
-
 def fivo(n, memo={}):
     if n in memo:
         return memo[n]
 
     if n <= 3:
         return 1
-    
-    memo[n] = fivo(n -1 , memo) + fivo(n-3 , memo)
+
+    memo[n] = fivo(n - 1, memo) + fivo(n - 3, memo)
 
     return memo[n]
+
 
 print(fivo(10))

@@ -15,43 +15,36 @@ grid = [
 """
 
 grid = [
-  [0, 0, 1, 1, 0],
-  [1, 1, 1, 0, 0],
-  [0, 0, 0, 0, 1],
-  [1, 1, 1, 0, 1],
-  [0, 0, 1, 0, 0]
+    [0, 0, 1, 1, 0],
+    [1, 1, 1, 0, 0],
+    [0, 0, 0, 0, 1],
+    [1, 1, 1, 0, 1],
+    [0, 0, 1, 0, 0],
 ]
 h = len(grid)
 w = len(grid[0])
-visited = [[False]*len(grid[0]) for _ in range(len(grid))]
+visited = [[False] * len(grid[0]) for _ in range(len(grid))]
 # 상하좌우
 dx = [-1, 1, 0, 0]
 dy = [0, 0, -1, 1]
 
 res = 0
 
-def solve(x,y):
 
+def solve(x, y):
     visited[x][y] = True
-    
+
     for i in range(4):
         nx, ny = x + dx[i], y + dy[i]
         if 0 <= nx < h and 0 <= ny < w:
             if grid[nx][ny] == 0 and not visited[nx][ny]:
-                solve(nx,ny)
+                solve(nx, ny)
 
-                
 
 for i in range(h):
     for j in range(w):
         if grid[i][j] == 0 and not visited[i][j]:
-            solve(i,j)
+            solve(i, j)
             res += 1
 
-print(res)        
-                
-
-
-
-
-
+print(res)

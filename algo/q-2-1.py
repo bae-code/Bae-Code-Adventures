@@ -9,22 +9,24 @@
 	•	같은 개수가 되는 가장 긴 길이를 구해야 함
 """
 input = "aaabbbababaabbbaaaabbbababbababbbbaaaabbb"
+
+
 def solve(ip):
     balance = 0
     first_occurrence = {0: -1}
     max_len = 0
-    for i,ch in enumerate(ip):
-        if ch == 'a':
+    for i, ch in enumerate(ip):
+        if ch == "a":
             balance += 1
         else:
             balance -= 1
-        
+
         if balance in first_occurrence:
             print(f"Balance {balance}")
             print(f"Index {i}")
             print(f"first_occ {first_occurrence[balance]}")
             print(max_len, i - first_occurrence[balance])
-            print('='* 30)
+            print("=" * 30)
             max_len = max(max_len, i - first_occurrence[balance])
         else:
             first_occurrence[balance] = i
@@ -35,7 +37,6 @@ a = solve(ip=input)
 output = 38
 
 print(a == output)
-
 
 
 """

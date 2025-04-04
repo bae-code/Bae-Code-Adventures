@@ -20,39 +20,37 @@ grid = """1 1 1 1
 grid = list(map(lambda x: list(map(int, x.split(" "))), grid.split("\n")))
 
 
-
-
 max_rain = max(max(grid))
 
 
-#상하좌우
+# 상하좌우
 
-xx = [-1,1,0,0]
-yy = [0,0,-1,1]
+xx = [-1, 1, 0, 0]
+yy = [0, 0, -1, 1]
 
 res = 0
 
 # 0 부터 최대 높이 이하까지 반복
 
 
-def dfs(x,y,rain):
+def dfs(x, y, rain):
     checked[x][y] = True
     for k in range(4):
-        nx , ny = x + xx[k] , y+ yy[k]
+        nx, ny = x + xx[k], y + yy[k]
         if 0 <= nx < N and 0 <= ny < N:
             if grid[nx][ny] > rain and checked[nx][ny] is False:
+                dfs(nx, ny, rain)
 
-                dfs(nx,ny,rain)
 
-for rain in range(max_rain+1):
+for rain in range(max_rain + 1):
     count = 0
     checked = [[False] * N for _ in range(N)]
     for i in range(N):
         for j in range(N):
             if grid[i][j] > rain and checked[i][j] is False:
-                dfs(x=i,y=j,rain=rain)
+                dfs(x=i, y=j, rain=rain)
                 count += 1
-    res = max(res,count)
+    res = max(res, count)
 
-        
+
 print(res)

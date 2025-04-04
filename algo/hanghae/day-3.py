@@ -28,7 +28,15 @@ wallpaper = [".#...", "..#..", "...#."]
 
 a = [".#...", "..#..", "...#."]
 b = ["..........", ".....#....", "......##..", "...##.....", "....#....."]
-c = [".##...##.", "#..#.#..#", "#...#...#", ".#.....#.", "..#...#..", "...#.#...", "....#...."]
+c = [
+    ".##...##.",
+    "#..#.#..#",
+    "#...#...#",
+    ".#.....#.",
+    "..#...#..",
+    "...#.#...",
+    "....#....",
+]
 d = ["..", "#."]
 
 
@@ -37,23 +45,23 @@ d = ["..", "#."]
 
 
 # re활용 무작위 풀이
-import re 
+import re
+
 
 def solve(i):
-    res = [None,None,None,None]    
+    res = [None, None, None, None]
     file_icon = "#"
-    for i,v in enumerate(i):
-
+    for i, v in enumerate(i):
         if file_icon in v:
             if res[0] is None:
                 res[0] = i
             res[2] = i + 1
             files = [f.start() for f in re.finditer(file_icon, v)]
             if res[1] is None:
-                    res[1] = files[0]
-                    res[3] = files[-1] + 1
+                res[1] = files[0]
+                res[3] = files[-1] + 1
             else:
-                if len(files) > 1:                    
+                if len(files) > 1:
                     if res[1] > files[0]:
                         res[1] = files[0]
                     if res[3] <= files[-1]:
@@ -66,9 +74,9 @@ def solve(i):
 
 # 최적화
 def solve(wallpaper):
-    min_row, min_col = float('inf'), float('inf') #가장 큰 수
+    min_row, min_col = float("inf"), float("inf")  # 가장 큰 수
     max_row, max_col = 0, 0
-    file_exist_icon = '#'
+    file_exist_icon = "#"
     for i, v in enumerate(wallpaper):
         for j, cha in enumerate(v):
             if cha == file_exist_icon:
@@ -78,11 +86,11 @@ def solve(wallpaper):
                 min_col = min(min_col, j)
                 max_col = max(max_col, j + 1)
 
-    res = [min_row,min_col,max_row,max_col]
-    return res    
+    res = [min_row, min_col, max_row, max_col]
+    return res
+
 
 solve(a)
 solve(b)
 solve(c)
 solve(d)
-        
