@@ -10,14 +10,6 @@ s = "3people unFollowed me"
 goo = "3people Unfollowed Me"
 
 def solution(s):
-    answer = ''
-    for i in s.split(" "):
-        first_word = i[0]
-        other = i[1:]
-        if first_word.isalpha():
-            answer += i.capitalize() + " "
-        else:
-            answer += i.capitalize() + " "
-    return answer[:-1]
+    return ' '.join(word.capitalize() if word else '' for word in s.split(' '))
 
 print(solution(s))
