@@ -4,7 +4,7 @@
 
 ## 📁 목차
 
-### ալ고
+### 📁 algo
 - [q-2-1.py](./algo/q-2-1.py)
 - [q-2-2.py](./algo/q-2-2.py)
 - [q-2.py](./algo/q-2.py)
@@ -15,6 +15,10 @@
 ### 📁 codility
 - [3-2.py](./algo/codility/3-2.py)
 - [3-3.py](./algo/codility/3-3.py)
+- [4-1.py](./algo/codility/4-1.py)
+- [4-2.py](./algo/codility/4-2.py)
+- [4-3.py](./algo/codility/4-3.py)
+- [4-4.py](./algo/codility/4-4.py)
 
 ### 📁 DFS
 - [q3-1.py](./algo/DFS/q3-1.py)
@@ -39,7 +43,3 @@
 
 ### 📁 sliding_window
 - [q1.py](./algo/sliding_window/q1.py)
-
----
-# Bae-Code-Adventures !
-하나씩
