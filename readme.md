@@ -26,6 +26,7 @@
 - [6-2.py](./algo/codility/6-2.py) - 세 변으로 삼각형 만들기 (Triangle)
 - [6-3.py](./algo/codility/6-3.py) - 원반 교차점의 수 (NumberOfDiscIntersections)
 - [7-1.py](./algo/codility/7-1.py) - 올바른 괄호 (Brackets)
+- [7-2.py](./algo/codility/7-2.py) - 살아남은 물고기 수 (Fish)
 
 ### 📁 DFS
 - [q3-1.py](./algo/DFS/q3-1.py) - 섬의 개수 구하기
