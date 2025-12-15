@@ -23,6 +23,8 @@
 - [5-2.py](./algo/codility/5-2.py) - DNA 서열 최소 충격 계수 (GenomicRangeQuery)
 - [5-3.py](./algo/codility/5-3.py) - 최소 평균을 갖는 슬라이스 (MinAvgTwoSlice)
 - [5-4.py](./algo/codility/5-4.py) - 나누어 떨어지는 수의 개수 (CountDiv)
+- [6-2.py](./algo/codility/6-2.py) - 세 변으로 삼각형 만들기 (Triangle)
+- [6-3.py](./algo/codility/6-3.py) - 원반 교차점의 수 (NumberOfDiscIntersections)
 
 ### 📁 DFS
 - [q3-1.py](./algo/DFS/q3-1.py) - 섬의 개수 구하기
