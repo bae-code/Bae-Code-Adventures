@@ -19,6 +19,10 @@
 - [4-2.py](./algo/codility/4-2.py) - 배열에 1부터 N까지의 숫자가 모두 있는지 확인
 - [4-3.py](./algo/codility/4-3.py) - 배열에 없는 가장 작은 양의 정수 찾기
 - [4-4.py](./algo/codility/4-4.py) - MaxCounters
+- [5-1.py](./algo/codility/5-1.py) - 지나가는 차들의 쌍 (PassingCars)
+- [5-2.py](./algo/codility/5-2.py) - DNA 서열 최소 충격 계수 (GenomicRangeQuery)
+- [5-3.py](./algo/codility/5-3.py) - 최소 평균을 갖는 슬라이스 (MinAvgTwoSlice)
+- [5-4.py](./algo/codility/5-4.py) - 나누어 떨어지는 수의 개수 (CountDiv)
 
 ### 📁 DFS
 - [q3-1.py](./algo/DFS/q3-1.py) - 섬의 개수 구하기
