@@ -12,6 +12,9 @@
 - [q1-2.py](./algo/q1-2.py) - 최소 괄호 추가
 - [q1.py](./algo/q1.py) - 올바른 괄호 판별
 
+### 📁 BFS
+- [game_bfs.py](./algo/BFS/game_bfs.py) - 게임 맵 최단거리
+
 ### 📁 codility
 - [3-2.py](./algo/codility/3-2.py) - 빠진 숫자 찾기
 - [3-3.py](./algo/codility/3-3.py) - 배열을 두 부분으로 나눴을 때 합의 차이의 최솟값
@@ -27,12 +30,15 @@
 - [6-3.py](./algo/codility/6-3.py) - 원반 교차점의 수 (NumberOfDiscIntersections)
 - [7-1.py](./algo/codility/7-1.py) - 올바른 괄호 (Brackets)
 - [7-2.py](./algo/codility/7-2.py) - 살아남은 물고기 수 (Fish)
+- [9-1.py](./algo/codility/9-1.py) - 가장 큰 이중 슬라이스 합 (MaxDoubleSliceSum)
+- [16-1.py](./algo/codility/16-1.py) - MaxNonoverlappingSegments
 
 ### 📁 DFS
 - [q3-1.py](./algo/DFS/q3-1.py) - 섬의 개수 구하기
 - [q3-2.py](./algo/DFS/q3-2.py) - 미로 탈출
 - [q3-3.py](./algo/DFS/q3-3.py) - 연결 요소의 개수 구하기
 - [q3.py](./algo/DFS/q3.py) - 빈 칸 덩어리 개수 구하기
+- [target_number.py](./algo/DFS/target_number.py) - 타겟 넘버
 
 ### 📁 hanghae
 - [day-1(bns).py](./algo/hanghae/day-1(bns).py) - Top K Frequent Elements
@@ -48,6 +54,9 @@
 - [day-7.py](./algo/hanghae/day-7.py) - 쇠막대기 (스택)
 - [day-8.py](./algo/hanghae/day-8.py) - 파일 이름 패턴 매칭
 - [day-9.py](./algo/hanghae/day-9.py) - 측정할 수 없는 무게의 최솟값 (그리디)
+
+### 📁 heap
+- [scoville.py](./algo/heap/scoville.py) - 스코빌 지수
 
 ### 📁 sliding_window
 - [q1.py](./algo/sliding_window/q1.py) - DNA 비밀번호
